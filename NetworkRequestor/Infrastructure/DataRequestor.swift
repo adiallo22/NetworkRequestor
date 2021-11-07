@@ -2,6 +2,8 @@ class DataRequestor {
     private let requestable: Requestable
     private var task: URLSessionTask?
     
+    typealias DataRequestorResult = Result<([DummyResponse]), NetworkError>
+    
     init(requestable: Requestable) {
         self.requestable = requestable
     }
@@ -10,7 +12,11 @@ class DataRequestor {
         task?.cancel()
     }
     
-    func requestSomething(from endpoint: String) {
+    func requestSomething(
+        from endpoint: String,
+        completion: @escaping (DataRequestorResult) -> Void
+    ) {
+        
         let request = NetworkRequest(
             endpoint: endpoint,
             headers: nil,
@@ -22,17 +28,10 @@ class DataRequestor {
         task = requestable.requestData(from: request) { result in
             switch result {
             case .success(let response):
-                APIMapper<[DummyResponse]>().map(response.0, response.1, completion: { apiMapperResult in
-                    switch apiMapperResult {
-                    case .success(let dummyResponse):
-                        print("sucess: \(dummyResponse)")
-                        
-                    case .failure(let error):
-                        print("error: \(error)")
-                    }
-                })
+                APIMapper<[DummyResponse]>().map(response.0, response.1, completion: completion)
+            
             case .failure(let error):
-                print("error: \(error)")
+                completion(.failure(error))
             }
         }
     }

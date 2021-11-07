@@ -1,4 +1,4 @@
-class APIMapper<T: Decodable> {
+struct APIMapper<T: Decodable> {
 
     func map(
         _ data: Data,
