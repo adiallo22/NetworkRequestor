@@ -3,13 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C058BD702737234200FE0742 /* NetworkRequestor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C058BD662737234200FE0742 /* NetworkRequestor.framework */; };
-		C058BD752737234300FE0742 /* NetworkRequestorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD742737234300FE0742 /* NetworkRequestorTests.swift */; };
 		C058BD772737234300FE0742 /* NetworkRequestor.h in Headers */ = {isa = PBXBuildFile; fileRef = C058BD692737234200FE0742 /* NetworkRequestor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C058BD82273725CD00FE0742 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = C058BD81273725CD00FE0742 /* Nimble */; };
+		C058BD85273725EA00FE0742 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = C058BD84273725EA00FE0742 /* Quick */; };
+		C058BD892737268400FE0742 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD882737268400FE0742 /* NetworkRequest.swift */; };
+		C058BD8C273726EE00FE0742 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD8B273726EE00FE0742 /* NetworkError.swift */; };
+		C058BD8F2737271300FE0742 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD8E2737271200FE0742 /* Requestable.swift */; };
+		C058BD922737277200FE0742 /* NativeRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD912737277200FE0742 /* NativeRequestable.swift */; };
+		C058BD95273727D300FE0742 /* NativeRequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD94273727D300FE0742 /* NativeRequestableTests.swift */; };
+		C058BD9C273736BC00FE0742 /* DataRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD9B273736BC00FE0742 /* DataRequestor.swift */; };
+		C058BD9F273736ED00FE0742 /* APIMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD9E273736ED00FE0742 /* APIMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +35,15 @@
 		C058BD692737234200FE0742 /* NetworkRequestor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequestor.h; sourceTree = "<group>"; };
 		C058BD6A2737234200FE0742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C058BD6F2737234200FE0742 /* NetworkRequestorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkRequestorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C058BD742737234300FE0742 /* NetworkRequestorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestorTests.swift; sourceTree = "<group>"; };
 		C058BD762737234300FE0742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C058BD882737268400FE0742 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		C058BD8B273726EE00FE0742 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C058BD8E2737271200FE0742 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		C058BD912737277200FE0742 /* NativeRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestable.swift; sourceTree = "<group>"; };
+		C058BD93273727D200FE0742 /* NetworkRequestorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetworkRequestorTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C058BD94273727D300FE0742 /* NativeRequestableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestableTests.swift; sourceTree = "<group>"; };
+		C058BD9B273736BC00FE0742 /* DataRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestor.swift; sourceTree = "<group>"; };
+		C058BD9E273736ED00FE0742 /* APIMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C058BD85273725EA00FE0742 /* Quick in Frameworks */,
 				C058BD702737234200FE0742 /* NetworkRequestor.framework in Frameworks */,
+				C058BD82273725CD00FE0742 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +88,10 @@
 		C058BD682737234200FE0742 /* NetworkRequestor */ = {
 			isa = PBXGroup;
 			children = (
+				C058BD9D273736E200FE0742 /* Helpers */,
+				C058BD902737276300FE0742 /* Infrastructure */,
+				C058BD8D2737270900FE0742 /* Interface */,
+				C058BD8A273726BB00FE0742 /* Models */,
 				C058BD692737234200FE0742 /* NetworkRequestor.h */,
 				C058BD6A2737234200FE0742 /* Info.plist */,
 			);
@@ -80,10 +101,45 @@
 		C058BD732737234200FE0742 /* NetworkRequestorTests */ = {
 			isa = PBXGroup;
 			children = (
-				C058BD742737234300FE0742 /* NetworkRequestorTests.swift */,
 				C058BD762737234300FE0742 /* Info.plist */,
+				C058BD94273727D300FE0742 /* NativeRequestableTests.swift */,
+				C058BD93273727D200FE0742 /* NetworkRequestorTests-Bridging-Header.h */,
 			);
 			path = NetworkRequestorTests;
+			sourceTree = "<group>";
+		};
+		C058BD8A273726BB00FE0742 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C058BD882737268400FE0742 /* NetworkRequest.swift */,
+				C058BD8B273726EE00FE0742 /* NetworkError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C058BD8D2737270900FE0742 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C058BD8E2737271200FE0742 /* Requestable.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		C058BD902737276300FE0742 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				C058BD912737277200FE0742 /* NativeRequestable.swift */,
+				C058BD9B273736BC00FE0742 /* DataRequestor.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C058BD9D273736E200FE0742 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C058BD9E273736ED00FE0742 /* APIMapper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +185,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				C058BD9A2737290A00FE0742 /* PBXTargetDependency */,
+				C058BD98273728FF00FE0742 /* PBXTargetDependency */,
 				C058BD722737234200FE0742 /* PBXTargetDependency */,
 			);
 			name = NetworkRequestorTests;
+			packageProductDependencies = (
+				C058BD81273725CD00FE0742 /* Nimble */,
+				C058BD84273725EA00FE0742 /* Quick */,
+			);
 			productName = NetworkRequestorTests;
 			productReference = C058BD6F2737234200FE0742 /* NetworkRequestorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -147,9 +209,11 @@
 				TargetAttributes = {
 					C058BD652737234200FE0742 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					C058BD6E2737234200FE0742 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -162,6 +226,10 @@
 				Base,
 			);
 			mainGroup = C058BD5C2737234200FE0742;
+			packageReferences = (
+				C058BD80273725CD00FE0742 /* XCRemoteSwiftPackageReference "Nimble" */,
+				C058BD83273725EA00FE0742 /* XCRemoteSwiftPackageReference "Quick" */,
+			);
 			productRefGroup = C058BD672737234200FE0742 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C058BD8C273726EE00FE0742 /* NetworkError.swift in Sources */,
+				C058BD8F2737271300FE0742 /* Requestable.swift in Sources */,
+				C058BD922737277200FE0742 /* NativeRequestable.swift in Sources */,
+				C058BD9F273736ED00FE0742 /* APIMapper.swift in Sources */,
+				C058BD9C273736BC00FE0742 /* DataRequestor.swift in Sources */,
+				C058BD892737268400FE0742 /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C058BD752737234300FE0742 /* NetworkRequestorTests.swift in Sources */,
+				C058BD95273727D300FE0742 /* NativeRequestableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +286,14 @@
 			isa = PBXTargetDependency;
 			target = C058BD652737234200FE0742 /* NetworkRequestor */;
 			targetProxy = C058BD712737234200FE0742 /* PBXContainerItemProxy */;
+		};
+		C058BD98273728FF00FE0742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C058BD97273728FF00FE0742 /* Nimble */;
+		};
+		C058BD9A2737290A00FE0742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C058BD992737290A00FE0742 /* Quick */;
 		};
 /* End PBXTargetDependency section */
 
@@ -341,6 +423,7 @@
 		C058BD7B2737234300FE0742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZNY957A2G6;
@@ -357,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdulCo.NetworkRequestor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +449,7 @@
 		C058BD7C2737234300FE0742 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZNY957A2G6;
@@ -389,6 +474,8 @@
 		C058BD7E2737234300FE0742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZNY957A2G6;
 				INFOPLIST_FILE = NetworkRequestorTests/Info.plist;
@@ -399,6 +486,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdulCo.NetworkRequestorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetworkRequestorTests/NetworkRequestorTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -407,6 +496,8 @@
 		C058BD7F2737234300FE0742 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZNY957A2G6;
 				INFOPLIST_FILE = NetworkRequestorTests/Info.plist;
@@ -417,6 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdulCo.NetworkRequestorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetworkRequestorTests/NetworkRequestorTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,6 +545,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C058BD80273725CD00FE0742 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.2.1;
+			};
+		};
+		C058BD83273725EA00FE0742 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C058BD81273725CD00FE0742 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C058BD80273725CD00FE0742 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		C058BD84273725EA00FE0742 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C058BD83273725EA00FE0742 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		C058BD97273728FF00FE0742 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C058BD80273725CD00FE0742 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		C058BD992737290A00FE0742 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C058BD83273725EA00FE0742 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C058BD5D2737234200FE0742 /* Project object */;
 }
