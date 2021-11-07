@@ -41,8 +41,7 @@ public class NativeRequestable: Requestable {
                 completion(.failure(.dataTaskError))
             }
             
-            guard let serverResponse = response as? HTTPURLResponse,
-                  serverResponse.statusCode == 200 else {
+            guard let serverResponse = response as? HTTPURLResponse else {
                 completion(.failure(.serverResponseFailure))
                 return
             }

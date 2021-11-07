@@ -16,6 +16,8 @@
 		C058BD8F2737271300FE0742 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD8E2737271200FE0742 /* Requestable.swift */; };
 		C058BD922737277200FE0742 /* NativeRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD912737277200FE0742 /* NativeRequestable.swift */; };
 		C058BD95273727D300FE0742 /* NativeRequestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD94273727D300FE0742 /* NativeRequestableTests.swift */; };
+		C058BD9C273736BC00FE0742 /* DataRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD9B273736BC00FE0742 /* DataRequestor.swift */; };
+		C058BD9F273736ED00FE0742 /* APIMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C058BD9E273736ED00FE0742 /* APIMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		C058BD912737277200FE0742 /* NativeRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestable.swift; sourceTree = "<group>"; };
 		C058BD93273727D200FE0742 /* NetworkRequestorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetworkRequestorTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C058BD94273727D300FE0742 /* NativeRequestableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestableTests.swift; sourceTree = "<group>"; };
+		C058BD9B273736BC00FE0742 /* DataRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestor.swift; sourceTree = "<group>"; };
+		C058BD9E273736ED00FE0742 /* APIMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		C058BD682737234200FE0742 /* NetworkRequestor */ = {
 			isa = PBXGroup;
 			children = (
+				C058BD9D273736E200FE0742 /* Helpers */,
 				C058BD902737276300FE0742 /* Infrastructure */,
 				C058BD8D2737270900FE0742 /* Interface */,
 				C058BD8A273726BB00FE0742 /* Models */,
@@ -124,8 +129,17 @@
 			isa = PBXGroup;
 			children = (
 				C058BD912737277200FE0742 /* NativeRequestable.swift */,
+				C058BD9B273736BC00FE0742 /* DataRequestor.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C058BD9D273736E200FE0742 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C058BD9E273736ED00FE0742 /* APIMapper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,8 @@
 				C058BD8C273726EE00FE0742 /* NetworkError.swift in Sources */,
 				C058BD8F2737271300FE0742 /* Requestable.swift in Sources */,
 				C058BD922737277200FE0742 /* NativeRequestable.swift in Sources */,
+				C058BD9F273736ED00FE0742 /* APIMapper.swift in Sources */,
+				C058BD9C273736BC00FE0742 /* DataRequestor.swift in Sources */,
 				C058BD892737268400FE0742 /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
